@@ -18,6 +18,12 @@ class BooksController {
         }
     }
     
+    func pullToRefresh() {
+        executor.run {
+            self.interactor.loadBooks()
+        }
+    }
+    
     func checkChange(isbn: String, isSelected: Bool) {
         executor.run {
             self.interactor.setSelected(for: isbn, to: isSelected)

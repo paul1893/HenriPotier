@@ -8,7 +8,7 @@ class BasketRepositoryImpl : BasketRepository {
     private let caller: Caller
     private let parser: BasketParser
     private func apiUrl(isbns: [String]) -> String  {
-        return "http://henri-potier.xebia.fr/books/\(isbns.joined(separator: ","))/commercialOffers" //TODO PBA
+        return "http://henri-potier.xebia.fr/books/\(isbns.joined(separator: ","))/commercialOffers"
     }
     
     init(_ caller: Caller = CallerImpl(), _ parser: BasketParser = BasketParser()) {
@@ -17,7 +17,6 @@ class BasketRepositoryImpl : BasketRepository {
     }
     
     func getDiscount(isbns: [String]) throws -> Discount {
-        // TODO PBA
         if let url = URL(string: apiUrl(isbns: isbns)) {
             let (receivedData, error) = caller.get(with: url)
             guard error == nil else { throw RepositoryError.serverError }
@@ -35,7 +34,7 @@ class BasketRepositoryImpl : BasketRepository {
                 percentage: discount?.percentage,
                 minus: discount?.minus,
                 slice: slice
-            ) // TODO PBA
+            )
         } else {
             throw RepositoryError.wrongUrl
         }

@@ -8,7 +8,7 @@ class RemoteBooksRepositoryImpl : RemoteBooksRepository {
     private let caller: Caller
     private let parser: BookParser
     private func apiUrl() -> String  {
-        return "http://henri-potier.xebia.fr/books" //TODO PBA
+        return "http://henri-potier.xebia.fr/books"
     }
     
     init(_ caller: Caller = CallerImpl(), _ parser: BookParser = BookParser()) {
@@ -17,7 +17,6 @@ class RemoteBooksRepositoryImpl : RemoteBooksRepository {
     }
     
     func getBooks() throws -> [Book]  {
-        // TODO PBA
         if let url = URL(string: apiUrl()) {
             let (receivedData, error) = caller.get(with: url)
             guard error == nil else { throw RepositoryError.serverError }

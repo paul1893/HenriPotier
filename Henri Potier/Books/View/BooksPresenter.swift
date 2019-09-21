@@ -9,7 +9,7 @@ protocol BooksPresenter {
 protocol BooksView : class {
     func showError(message: String)
     func showBooks(with books: [BookViewModel])
-    func showEmptyBooks() // TODO PBA
+    func showEmptyBooks()
     func showEmptyBadge()
     func showBadge(_ badgeCount: Int)
 }

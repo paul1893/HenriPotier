@@ -19,10 +19,3 @@ struct BasketBookViewModel : Equatable {
         self.price = price
     }
 }
-
-struct DiscountViewModel : Equatable {
-    var price: String
-    init(price: String) {
-        self.price = price
-    }
-}

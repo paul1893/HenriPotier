@@ -18,6 +18,7 @@
 		2E5431102334F09E0094C6EE /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54310D2334F09E0094C6EE /* BookParser.swift */; };
 		2E5431122334F0AA0094C6EE /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431112334F0AA0094C6EE /* Caller.swift */; };
 		2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */; };
+		2E9699152336DA68005698DB /* DiscountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9699142336DA68005698DB /* DiscountViewModel.swift */; };
 		2ECEA45F233568920043CDF2 /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA45E233568920043CDF2 /* DiscountTests.swift */; };
 		2ECEA461233570650043CDF2 /* BookRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECEA460233570650043CDF2 /* BookRowView.xib */; };
 		2ECEA463233571660043CDF2 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA462233571660043CDF2 /* BookRowView.swift */; };
@@ -77,6 +78,7 @@
 		2E54310D2334F09E0094C6EE /* BookParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
 		2E5431112334F0AA0094C6EE /* Caller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
 		2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBooksRepositoryTests.swift; sourceTree = "<group>"; };
+		2E9699142336DA68005698DB /* DiscountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewModel.swift; sourceTree = "<group>"; };
 		2E97A96C2334E71A00C4889B /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECEA45E233568920043CDF2 /* DiscountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
 		2ECEA460233570650043CDF2 /* BookRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRowView.xib; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				2EE76C772333DE0A00073A4A /* BasketViewController.swift */,
 				2EEB134B2335004C00445292 /* BasketController.swift */,
 				2EEB134F2335009D00445292 /* BasketViewModel.swift */,
+				2E9699142336DA68005698DB /* DiscountViewModel.swift */,
 				2EEB13572335032200445292 /* BasketPresenter.swift */,
 				2ECEA460233570650043CDF2 /* BookRowView.xib */,
 				2ECEA462233571660043CDF2 /* BookRowView.swift */,
@@ -496,6 +499,7 @@
 				2EE76CA32334C62000073A4A /* HenriPotierModule.swift in Sources */,
 				2EEB13502335009D00445292 /* BasketViewModel.swift in Sources */,
 				2EEB13642335278D00445292 /* Discount.swift in Sources */,
+				2E9699152336DA68005698DB /* DiscountViewModel.swift in Sources */,
 				2EEB1352233501C300445292 /* BasketInteractor.swift in Sources */,
 				2E306C562333DD1C00AF58CD /* BooksViewController.swift in Sources */,
 				2EE76C7F2333E32500073A4A /* BooksInteractor.swift in Sources */,

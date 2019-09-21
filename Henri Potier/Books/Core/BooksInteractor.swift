@@ -24,17 +24,19 @@ class BooksInteractorImpl : BooksInteractor {
     }
     
     func loadBooks() {
-        if (!deviceManager.isOnline()) { // TODO PBA T.U
+        if (!deviceManager.isOnline()) {
             let books = self.localRepository.getBooks()
             presenter.present(with: books)
+            presenter.presentBooksBadge(with: books.filter({$0.isSelected}).count)
             return
         }
         
         do {
             let books = try remoteRepository.getBooks()
             presenter.present(with: books)
-            localRepository.deleteBooks() // TODO PBA T.U
+            localRepository.deleteBooks()
             localRepository.save(books: books)
+            presenter.presentBooksBadge(with: localRepository.getBooks().filter({$0.isSelected}).count)
         } catch {
             presenter.presentError()
         }

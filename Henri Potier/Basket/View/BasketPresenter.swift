@@ -18,7 +18,6 @@ class BasketPresenterImpl: BasketPresenter {
     }
     
     func present(books: [Book]) {
-        // TODO PBA - TODO T.U
         executor.runOnMain {
             self.view?.showBasket(basket: BasketViewModel(
                 books: books.map({ (book) -> BasketBookViewModel in
@@ -34,7 +33,6 @@ class BasketPresenterImpl: BasketPresenter {
     }
     
     func presentDiscount(price: Int) {
-        // TODO PBA - TODO T.U
         executor.runOnMain {
             self.view?.showDiscount(discount:
                 DiscountViewModel(

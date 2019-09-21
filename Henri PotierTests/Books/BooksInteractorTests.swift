@@ -84,6 +84,8 @@ class BooksInteractorTests: XCTestCase {
         XCTAssertTrue(localRepository.deleteBooksFunction)
         XCTAssertTrue(localRepository.saveBooksFunction)
         XCTAssertEqual(localRepository.saveBooksFunctionValue, [book])
+        XCTAssertTrue(presenter.presentBooksBadgeFunction)
+        XCTAssertEqual(presenter.presentBooksBadgeFunctionValue, 0)
     }
     
     func testLoadBooks_WhenRepositoryThrowError() {
@@ -117,7 +119,7 @@ class BooksInteractorTests: XCTestCase {
             price: 0,
             cover: "cover",
             synopsis: "synopsis",
-            isSelected: false
+            isSelected: true
             )]
         let presenter = MockPresenter()
         let deviceManager = MockDeviceManager(online: false)
@@ -140,8 +142,10 @@ class BooksInteractorTests: XCTestCase {
             price: 0,
             cover: "cover",
             synopsis: "synopsis",
-            isSelected: false
+            isSelected: true
             )])
+        XCTAssertTrue(presenter.presentBooksBadgeFunction)
+        XCTAssertEqual(presenter.presentBooksBadgeFunctionValue, 1)
     }
     
     func testSetSelected() {

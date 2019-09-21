@@ -26,7 +26,6 @@ class BasketParser : Parser {
                 }
             })
             return basketJson
-            // TODO PBA T.U
         } catch {
             throw RepositoryError.parsingError
         }

@@ -32,6 +32,18 @@ class BooksControllerTests: XCTestCase {
         XCTAssertTrue(interactor.loadBooksFunction)
     }
     
+    func testPullToRefresh() {
+        // GIVEN
+        let interactor = MockInteractor()
+        let controller = BooksController(with: interactor, executor: MockExecutor())
+        
+        // WHEN
+        controller.pullToRefresh()
+        
+        // THEN
+        XCTAssertTrue(interactor.loadBooksFunction)
+    }
+    
     func testCheckChange() {
         // GIVEN
         let interactor = MockInteractor()

@@ -18,7 +18,9 @@ class BasketInteractorImpl : BasketInteractor {
     }
     
     func loadBasket() {
-        let books = localBooksRepository.getBooks().filter { (book) -> Bool in
+        let books = localBooksRepository.getBooks()
+            .sorted {$0.cover < $1.cover}
+            .filter { (book) -> Bool in
             return book.isSelected
         }
         let price = books.map { (book) -> Int in book.price}.reduce(0, +)

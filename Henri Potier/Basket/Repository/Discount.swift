@@ -14,7 +14,7 @@ struct Discount: Equatable {
             let value = slice?.value,
             price > sliceValue {
                 let numberOfSlice = Int((Double(price)/Double(sliceValue)).rounded(.down))
-                return [percentage, minus, numberOfSlice*value].compactMap({$0}).max() ?? 0 // TODO PBA - T.U
+                return [percentage, minus, numberOfSlice*value].compactMap({$0}).max() ?? 0
             }
         return [percentage, minus].compactMap({$0}).max() ?? 0
     }

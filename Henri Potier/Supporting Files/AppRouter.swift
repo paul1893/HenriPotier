@@ -20,13 +20,11 @@ class AppRouter {
     }
     
     fileprivate func showBooksViewController() {
-        let viewController = HenriPotierModule.booksViewController()
-        tabBarController.selectedViewController = viewController // TODO PBA
+        tabBarController.selectedViewController = HenriPotierModule.booksViewController()
     }
     
     fileprivate func showBasketViewController() {
-        let viewController = HenriPotierModule.basketViewController()
-        tabBarController.selectedViewController = viewController // TODO PBA
+        tabBarController.selectedViewController = HenriPotierModule.basketViewController()
     }
 }
 
