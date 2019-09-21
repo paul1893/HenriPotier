@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E306C542333DD1C00AF58CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E306C532333DD1C00AF58CD /* AppDelegate.swift */; };
+		2E306C562333DD1C00AF58CD /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E306C552333DD1C00AF58CD /* BooksViewController.swift */; };
+		2E306C592333DD1C00AF58CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E306C572333DD1C00AF58CD /* Main.storyboard */; };
+		2E306C5C2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E306C5A2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld */; };
+		2E306C5E2333DD1D00AF58CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E306C5D2333DD1D00AF58CD /* Assets.xcassets */; };
+		2E306C612333DD1D00AF58CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E306C5F2333DD1D00AF58CD /* LaunchScreen.storyboard */; };
+		2E54310E2334F09E0094C6EE /* RemoteBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54310B2334F09E0094C6EE /* RemoteBooksRepository.swift */; };
+		2E54310F2334F09E0094C6EE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54310C2334F09E0094C6EE /* Book.swift */; };
+		2E5431102334F09E0094C6EE /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54310D2334F09E0094C6EE /* BookParser.swift */; };
+		2E5431122334F0AA0094C6EE /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431112334F0AA0094C6EE /* Caller.swift */; };
+		2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */; };
+		2ECEA45F233568920043CDF2 /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA45E233568920043CDF2 /* DiscountTests.swift */; };
+		2ECEA461233570650043CDF2 /* BookRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECEA460233570650043CDF2 /* BookRowView.xib */; };
+		2ECEA463233571660043CDF2 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA462233571660043CDF2 /* BookRowView.swift */; };
+		2EE76C782333DE0A00073A4A /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C772333DE0A00073A4A /* BasketViewController.swift */; };
+		2EE76C7C2333E1C900073A4A /* BooksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C7B2333E1C900073A4A /* BooksController.swift */; };
+		2EE76C7F2333E32500073A4A /* BooksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C7E2333E32500073A4A /* BooksInteractor.swift */; };
+		2EE76C812333E38D00073A4A /* SupportingFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C802333E38D00073A4A /* SupportingFiles.swift */; };
+		2EE76C992333E49F00073A4A /* BooksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C982333E49F00073A4A /* BooksPresenter.swift */; };
+		2EE76C9B2333E57A00073A4A /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C9A2333E57A00073A4A /* BookViewModel.swift */; };
+		2EE76C9F2333E75000073A4A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C9E2333E75000073A4A /* Util.swift */; };
+		2EE76CA32334C62000073A4A /* HenriPotierModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CA22334C62000073A4A /* HenriPotierModule.swift */; };
+		2EE76CA52334C66A00073A4A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CA42334C66A00073A4A /* AppRouter.swift */; };
+		2EE76CA72334C69A00073A4A /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CA62334C69A00073A4A /* DeviceManager.swift */; };
+		2EE76CA92334CEC900073A4A /* UIImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CA82334CEC900073A4A /* UIImageCollectionViewCell.swift */; };
+		2EE76CB22334D6A400073A4A /* BooksControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CB12334D6A400073A4A /* BooksControllerTests.swift */; };
+		2EE76CBA2334D6FC00073A4A /* MockExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CB92334D6FC00073A4A /* MockExecutor.swift */; };
+		2EE76CBD2334DA2300073A4A /* BooksInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76CBC2334DA2300073A4A /* BooksInteractorTests.swift */; };
+		2EEB13472334F5F300445292 /* LocalBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13462334F5F300445292 /* LocalBooksRepository.swift */; };
+		2EEB134C2335004C00445292 /* BasketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB134B2335004C00445292 /* BasketController.swift */; };
+		2EEB13502335009D00445292 /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB134F2335009D00445292 /* BasketViewModel.swift */; };
+		2EEB1352233501C300445292 /* BasketInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB1351233501C300445292 /* BasketInteractor.swift */; };
+		2EEB1355233502C600445292 /* BasketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB1354233502C600445292 /* BasketRepository.swift */; };
+		2EEB13582335032200445292 /* BasketPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13572335032200445292 /* BasketPresenter.swift */; };
+		2EEB135A2335035300445292 /* BasketControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13592335035300445292 /* BasketControllerTests.swift */; };
+		2EEB135C233504F400445292 /* BasketInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB135B233504F400445292 /* BasketInteractorTests.swift */; };
+		2EEB135E2335063900445292 /* MockRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB135D2335063900445292 /* MockRepository.swift */; };
+		2EEB1360233507E600445292 /* BooksPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB135F233507E600445292 /* BooksPresenterTests.swift */; };
+		2EEB13622335105800445292 /* BasketParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13612335105800445292 /* BasketParser.swift */; };
+		2EEB13642335278D00445292 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13632335278D00445292 /* Discount.swift */; };
+		2EEB13662335421000445292 /* BasketPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13652335421000445292 /* BasketPresenterTests.swift */; };
+		2EEB13682335443400445292 /* BasketRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB13672335443400445292 /* BasketRepositoryTests.swift */; };
+		7C1215AD74BCC72C11694448 /* Pods_Henri_Potier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB49ADCF35D05C001462A348 /* Pods_Henri_Potier.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EE76CB42334D6A400073A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E306C482333DD1C00AF58CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E306C4F2333DD1C00AF58CD;
+			remoteInfo = "Henri Potier";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E306C502333DD1C00AF58CD /* Henri Potier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Henri Potier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E306C532333DD1C00AF58CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E306C552333DD1C00AF58CD /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		2E306C582333DD1C00AF58CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E306C5B2333DD1C00AF58CD /* Henri_Potier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Henri_Potier.xcdatamodel; sourceTree = "<group>"; };
+		2E306C5D2333DD1D00AF58CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E306C602333DD1D00AF58CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E306C622333DD1D00AF58CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5431022334EEDE0094C6EE /* Repository.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Repository.framework; path = "../../../Library/Developer/Xcode/DerivedData/Repository-ffninfsviautamdsnycipplekozb/Build/Products/Debug-iphonesimulator/Repository.framework"; sourceTree = "<group>"; };
+		2E54310B2334F09E0094C6EE /* RemoteBooksRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteBooksRepository.swift; sourceTree = "<group>"; };
+		2E54310C2334F09E0094C6EE /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		2E54310D2334F09E0094C6EE /* BookParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
+		2E5431112334F0AA0094C6EE /* Caller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
+		2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBooksRepositoryTests.swift; sourceTree = "<group>"; };
+		2E97A96C2334E71A00C4889B /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ECEA45E233568920043CDF2 /* DiscountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
+		2ECEA460233570650043CDF2 /* BookRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRowView.xib; sourceTree = "<group>"; };
+		2ECEA462233571660043CDF2 /* BookRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowView.swift; sourceTree = "<group>"; };
+		2EE76C772333DE0A00073A4A /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		2EE76C7B2333E1C900073A4A /* BooksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksController.swift; sourceTree = "<group>"; };
+		2EE76C7E2333E32500073A4A /* BooksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInteractor.swift; sourceTree = "<group>"; };
+		2EE76C802333E38D00073A4A /* SupportingFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportingFiles.swift; sourceTree = "<group>"; };
+		2EE76C982333E49F00073A4A /* BooksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksPresenter.swift; sourceTree = "<group>"; };
+		2EE76C9A2333E57A00073A4A /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		2EE76C9E2333E75000073A4A /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		2EE76CA22334C62000073A4A /* HenriPotierModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HenriPotierModule.swift; sourceTree = "<group>"; };
+		2EE76CA42334C66A00073A4A /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		2EE76CA62334C69A00073A4A /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		2EE76CA82334CEC900073A4A /* UIImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		2EE76CAF2334D6A400073A4A /* Henri PotierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Henri PotierTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE76CB12334D6A400073A4A /* BooksControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksControllerTests.swift; sourceTree = "<group>"; };
+		2EE76CB32334D6A400073A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EE76CB92334D6FC00073A4A /* MockExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExecutor.swift; sourceTree = "<group>"; };
+		2EE76CBC2334DA2300073A4A /* BooksInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInteractorTests.swift; sourceTree = "<group>"; };
+		2EE76CD92334E4C200073A4A /* libPods-Repository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Repository.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EEB13462334F5F300445292 /* LocalBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBooksRepository.swift; sourceTree = "<group>"; };
+		2EEB134B2335004C00445292 /* BasketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketController.swift; sourceTree = "<group>"; };
+		2EEB134F2335009D00445292 /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
+		2EEB1351233501C300445292 /* BasketInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInteractor.swift; sourceTree = "<group>"; };
+		2EEB1354233502C600445292 /* BasketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRepository.swift; sourceTree = "<group>"; };
+		2EEB13572335032200445292 /* BasketPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenter.swift; sourceTree = "<group>"; };
+		2EEB13592335035300445292 /* BasketControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketControllerTests.swift; sourceTree = "<group>"; };
+		2EEB135B233504F400445292 /* BasketInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketInteractorTests.swift; sourceTree = "<group>"; };
+		2EEB135D2335063900445292 /* MockRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRepository.swift; sourceTree = "<group>"; };
+		2EEB135F233507E600445292 /* BooksPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksPresenterTests.swift; sourceTree = "<group>"; };
+		2EEB13612335105800445292 /* BasketParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketParser.swift; sourceTree = "<group>"; };
+		2EEB13632335278D00445292 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
+		2EEB13652335421000445292 /* BasketPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketPresenterTests.swift; sourceTree = "<group>"; };
+		2EEB13672335443400445292 /* BasketRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRepositoryTests.swift; sourceTree = "<group>"; };
+		6A1787F3994CB55B68AD1BAE /* Pods-Henri Potier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Henri Potier.debug.xcconfig"; path = "Target Support Files/Pods-Henri Potier/Pods-Henri Potier.debug.xcconfig"; sourceTree = "<group>"; };
+		A56AB4E83DB57BE6C2E65692 /* Pods-Henri Potier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Henri Potier.release.xcconfig"; path = "Target Support Files/Pods-Henri Potier/Pods-Henri Potier.release.xcconfig"; sourceTree = "<group>"; };
+		CB49ADCF35D05C001462A348 /* Pods_Henri_Potier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Henri_Potier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E306C4D2333DD1C00AF58CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C1215AD74BCC72C11694448 /* Pods_Henri_Potier.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE76CAC2334D6A400073A4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E306C472333DD1C00AF58CD = {
+			isa = PBXGroup;
+			children = (
+				2E306C522333DD1C00AF58CD /* Henri Potier */,
+				2EE76CB02334D6A400073A4A /* Henri PotierTests */,
+				2E306C512333DD1C00AF58CD /* Products */,
+				61AD1E1AD98934133B2E1AEE /* Pods */,
+				5EF6FA00A38C1B9FD405C7BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E306C512333DD1C00AF58CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E306C502333DD1C00AF58CD /* Henri Potier.app */,
+				2EE76CAF2334D6A400073A4A /* Henri PotierTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E306C522333DD1C00AF58CD /* Henri Potier */ = {
+			isa = PBXGroup;
+			children = (
+				2EE76CA22334C62000073A4A /* HenriPotierModule.swift */,
+				2EE76C762333DDF200073A4A /* Basket */,
+				2EE76C752333DDD800073A4A /* Books */,
+				2EE76C792333DE2900073A4A /* Supporting Files */,
+				2E306C572333DD1C00AF58CD /* Main.storyboard */,
+				2E306C5D2333DD1D00AF58CD /* Assets.xcassets */,
+				2E306C5F2333DD1D00AF58CD /* LaunchScreen.storyboard */,
+				2E306C622333DD1D00AF58CD /* Info.plist */,
+				2E306C5A2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld */,
+			);
+			path = "Henri Potier";
+			sourceTree = "<group>";
+		};
+		2E54310A2334F0850094C6EE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB13452334F5E300445292 /* remote */,
+				2EEB13442334F5DE00445292 /* local */,
+				2E54310C2334F09E0094C6EE /* Book.swift */,
+				2E54310D2334F09E0094C6EE /* BookParser.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2EE76C752333DDD800073A4A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				2E54310A2334F0850094C6EE /* Repository */,
+				2EE76C7D2333E31000073A4A /* Core */,
+				2EE76C7A2333E1B400073A4A /* View */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		2EE76C762333DDF200073A4A /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB134A2335003E00445292 /* Repository */,
+				2EEB13492335003900445292 /* Core */,
+				2EEB13482335003500445292 /* View */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		2EE76C792333DE2900073A4A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E5431112334F0AA0094C6EE /* Caller.swift */,
+				2E306C532333DD1C00AF58CD /* AppDelegate.swift */,
+				2EE76C802333E38D00073A4A /* SupportingFiles.swift */,
+				2EE76C9E2333E75000073A4A /* Util.swift */,
+				2EE76CA42334C66A00073A4A /* AppRouter.swift */,
+				2EE76CA62334C69A00073A4A /* DeviceManager.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2EE76C7A2333E1B400073A4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E306C552333DD1C00AF58CD /* BooksViewController.swift */,
+				2EE76C7B2333E1C900073A4A /* BooksController.swift */,
+				2EE76C982333E49F00073A4A /* BooksPresenter.swift */,
+				2EE76C9A2333E57A00073A4A /* BookViewModel.swift */,
+				2EE76CA82334CEC900073A4A /* UIImageCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EE76C7D2333E31000073A4A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2EE76C7E2333E32500073A4A /* BooksInteractor.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2EE76CB02334D6A400073A4A /* Henri PotierTests */ = {
+			isa = PBXGroup;
+			children = (
+				2EE76CB92334D6FC00073A4A /* MockExecutor.swift */,
+				2EEB135D2335063900445292 /* MockRepository.swift */,
+				2EEB13532335024300445292 /* Basket */,
+				2EE76CBB2334D72B00073A4A /* Books */,
+				2EE76CB32334D6A400073A4A /* Info.plist */,
+			);
+			path = "Henri PotierTests";
+			sourceTree = "<group>";
+		};
+		2EE76CBB2334D72B00073A4A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				2EE76CB12334D6A400073A4A /* BooksControllerTests.swift */,
+				2EE76CBC2334DA2300073A4A /* BooksInteractorTests.swift */,
+				2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */,
+				2EEB135F233507E600445292 /* BooksPresenterTests.swift */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		2EEB13442334F5DE00445292 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB13462334F5F300445292 /* LocalBooksRepository.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		2EEB13452334F5E300445292 /* remote */ = {
+			isa = PBXGroup;
+			children = (
+				2E54310B2334F09E0094C6EE /* RemoteBooksRepository.swift */,
+			);
+			path = remote;
+			sourceTree = "<group>";
+		};
+		2EEB13482335003500445292 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EE76C772333DE0A00073A4A /* BasketViewController.swift */,
+				2EEB134B2335004C00445292 /* BasketController.swift */,
+				2EEB134F2335009D00445292 /* BasketViewModel.swift */,
+				2EEB13572335032200445292 /* BasketPresenter.swift */,
+				2ECEA460233570650043CDF2 /* BookRowView.xib */,
+				2ECEA462233571660043CDF2 /* BookRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EEB13492335003900445292 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB1351233501C300445292 /* BasketInteractor.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2EEB134A2335003E00445292 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB1354233502C600445292 /* BasketRepository.swift */,
+				2EEB13612335105800445292 /* BasketParser.swift */,
+				2EEB13632335278D00445292 /* Discount.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2EEB13532335024300445292 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				2EEB13592335035300445292 /* BasketControllerTests.swift */,
+				2EEB135B233504F400445292 /* BasketInteractorTests.swift */,
+				2EEB13652335421000445292 /* BasketPresenterTests.swift */,
+				2EEB13672335443400445292 /* BasketRepositoryTests.swift */,
+				2ECEA45E233568920043CDF2 /* DiscountTests.swift */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		5EF6FA00A38C1B9FD405C7BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5431022334EEDE0094C6EE /* Repository.framework */,
+				2EE76CD92334E4C200073A4A /* libPods-Repository.a */,
+				2E97A96C2334E71A00C4889B /* Repository.framework */,
+				CB49ADCF35D05C001462A348 /* Pods_Henri_Potier.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61AD1E1AD98934133B2E1AEE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A1787F3994CB55B68AD1BAE /* Pods-Henri Potier.debug.xcconfig */,
+				A56AB4E83DB57BE6C2E65692 /* Pods-Henri Potier.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E306C4F2333DD1C00AF58CD /* Henri Potier */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E306C652333DD1D00AF58CD /* Build configuration list for PBXNativeTarget "Henri Potier" */;
+			buildPhases = (
+				647B1D6944FE7AEA495A2552 /* [CP] Check Pods Manifest.lock */,
+				2E306C4C2333DD1C00AF58CD /* Sources */,
+				2E306C4D2333DD1C00AF58CD /* Frameworks */,
+				2E306C4E2333DD1C00AF58CD /* Resources */,
+				4BBBB09445D858A522A63C0A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Henri Potier";
+			productName = "Henri Potier";
+			productReference = 2E306C502333DD1C00AF58CD /* Henri Potier.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2EE76CAE2334D6A400073A4A /* Henri PotierTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EE76CB62334D6A400073A4A /* Build configuration list for PBXNativeTarget "Henri PotierTests" */;
+			buildPhases = (
+				2EE76CAB2334D6A400073A4A /* Sources */,
+				2EE76CAC2334D6A400073A4A /* Frameworks */,
+				2EE76CAD2334D6A400073A4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EE76CB52334D6A400073A4A /* PBXTargetDependency */,
+			);
+			name = "Henri PotierTests";
+			productName = "Henri PotierTests";
+			productReference = 2EE76CAF2334D6A400073A4A /* Henri PotierTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E306C482333DD1C00AF58CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Paul Bancarel";
+				TargetAttributes = {
+					2E306C4F2333DD1C00AF58CD = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					2EE76CAE2334D6A400073A4A = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 2E306C4F2333DD1C00AF58CD;
+					};
+				};
+			};
+			buildConfigurationList = 2E306C4B2333DD1C00AF58CD /* Build configuration list for PBXProject "Henri Potier" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E306C472333DD1C00AF58CD;
+			productRefGroup = 2E306C512333DD1C00AF58CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E306C4F2333DD1C00AF58CD /* Henri Potier */,
+				2EE76CAE2334D6A400073A4A /* Henri PotierTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E306C4E2333DD1C00AF58CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ECEA461233570650043CDF2 /* BookRowView.xib in Resources */,
+				2E306C612333DD1D00AF58CD /* LaunchScreen.storyboard in Resources */,
+				2E306C5E2333DD1D00AF58CD /* Assets.xcassets in Resources */,
+				2E306C592333DD1C00AF58CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE76CAD2334D6A400073A4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BBBB09445D858A522A63C0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Henri Potier/Pods-Henri Potier-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Henri Potier/Pods-Henri Potier-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		647B1D6944FE7AEA495A2552 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Henri Potier-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E306C4C2333DD1C00AF58CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EEB13622335105800445292 /* BasketParser.swift in Sources */,
+				2E54310F2334F09E0094C6EE /* Book.swift in Sources */,
+				2EE76C9F2333E75000073A4A /* Util.swift in Sources */,
+				2E5431102334F09E0094C6EE /* BookParser.swift in Sources */,
+				2EE76CA32334C62000073A4A /* HenriPotierModule.swift in Sources */,
+				2EEB13502335009D00445292 /* BasketViewModel.swift in Sources */,
+				2EEB13642335278D00445292 /* Discount.swift in Sources */,
+				2EEB1352233501C300445292 /* BasketInteractor.swift in Sources */,
+				2E306C562333DD1C00AF58CD /* BooksViewController.swift in Sources */,
+				2EE76C7F2333E32500073A4A /* BooksInteractor.swift in Sources */,
+				2EE76C812333E38D00073A4A /* SupportingFiles.swift in Sources */,
+				2EEB13582335032200445292 /* BasketPresenter.swift in Sources */,
+				2EE76CA72334C69A00073A4A /* DeviceManager.swift in Sources */,
+				2EE76CA92334CEC900073A4A /* UIImageCollectionViewCell.swift in Sources */,
+				2EEB1355233502C600445292 /* BasketRepository.swift in Sources */,
+				2EE76C7C2333E1C900073A4A /* BooksController.swift in Sources */,
+				2E54310E2334F09E0094C6EE /* RemoteBooksRepository.swift in Sources */,
+				2E306C5C2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld in Sources */,
+				2EE76C9B2333E57A00073A4A /* BookViewModel.swift in Sources */,
+				2EE76CA52334C66A00073A4A /* AppRouter.swift in Sources */,
+				2EE76C992333E49F00073A4A /* BooksPresenter.swift in Sources */,
+				2EE76C782333DE0A00073A4A /* BasketViewController.swift in Sources */,
+				2ECEA463233571660043CDF2 /* BookRowView.swift in Sources */,
+				2EEB13472334F5F300445292 /* LocalBooksRepository.swift in Sources */,
+				2E5431122334F0AA0094C6EE /* Caller.swift in Sources */,
+				2E306C542333DD1C00AF58CD /* AppDelegate.swift in Sources */,
+				2EEB134C2335004C00445292 /* BasketController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EE76CAB2334D6A400073A4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE76CBA2334D6FC00073A4A /* MockExecutor.swift in Sources */,
+				2EEB135E2335063900445292 /* MockRepository.swift in Sources */,
+				2EEB135A2335035300445292 /* BasketControllerTests.swift in Sources */,
+				2EEB13682335443400445292 /* BasketRepositoryTests.swift in Sources */,
+				2EE76CBD2334DA2300073A4A /* BooksInteractorTests.swift in Sources */,
+				2EE76CB22334D6A400073A4A /* BooksControllerTests.swift in Sources */,
+				2EEB1360233507E600445292 /* BooksPresenterTests.swift in Sources */,
+				2EEB135C233504F400445292 /* BasketInteractorTests.swift in Sources */,
+				2ECEA45F233568920043CDF2 /* DiscountTests.swift in Sources */,
+				2EEB13662335421000445292 /* BasketPresenterTests.swift in Sources */,
+				2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2EE76CB52334D6A400073A4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E306C4F2333DD1C00AF58CD /* Henri Potier */;
+			targetProxy = 2EE76CB42334D6A400073A4A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E306C572333DD1C00AF58CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E306C582333DD1C00AF58CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E306C5F2333DD1D00AF58CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E306C602333DD1D00AF58CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E306C632333DD1D00AF58CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E306C642333DD1D00AF58CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E306C662333DD1D00AF58CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A1787F3994CB55B68AD1BAE /* Pods-Henri Potier.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YFUK27DKT;
+				INFOPLIST_FILE = "Henri Potier/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pba.Henri-Potier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E306C672333DD1D00AF58CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A56AB4E83DB57BE6C2E65692 /* Pods-Henri Potier.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YFUK27DKT;
+				INFOPLIST_FILE = "Henri Potier/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pba.Henri-Potier";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2EE76CB72334D6A400073A4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YFUK27DKT;
+				INFOPLIST_FILE = "Henri PotierTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pba.Henri-PotierTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Henri Potier.app/Henri Potier";
+			};
+			name = Debug;
+		};
+		2EE76CB82334D6A400073A4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3YFUK27DKT;
+				INFOPLIST_FILE = "Henri PotierTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.pba.Henri-PotierTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Henri Potier.app/Henri Potier";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E306C4B2333DD1C00AF58CD /* Build configuration list for PBXProject "Henri Potier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E306C632333DD1D00AF58CD /* Debug */,
+				2E306C642333DD1D00AF58CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E306C652333DD1D00AF58CD /* Build configuration list for PBXNativeTarget "Henri Potier" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E306C662333DD1D00AF58CD /* Debug */,
+				2E306C672333DD1D00AF58CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EE76CB62334D6A400073A4A /* Build configuration list for PBXNativeTarget "Henri PotierTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EE76CB72334D6A400073A4A /* Debug */,
+				2EE76CB82334D6A400073A4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E306C5A2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E306C5B2333DD1C00AF58CD /* Henri_Potier.xcdatamodel */,
+			);
+			currentVersion = 2E306C5B2333DD1C00AF58CD /* Henri_Potier.xcdatamodel */;
+			path = Henri_Potier.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E306C482333DD1C00AF58CD /* Project object */;
+}
