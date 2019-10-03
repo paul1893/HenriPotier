@@ -1,6 +1,7 @@
 import Foundation
 import SwiftyJSON
 
+
 class BasketParser : Parser {
     typealias T = BasketJSON?
     func parse(_ data: Data) throws -> BasketJSON? {

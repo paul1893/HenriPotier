@@ -15,8 +15,8 @@ class BasketControllerImpl : BasketController {
     }
     
     func viewWillAppear() {
-        executor.run {
-            self.interactor.loadBasket()
+        executor.run { [weak self] in
+            self?.interactor.loadBasket()
         }
         
     }

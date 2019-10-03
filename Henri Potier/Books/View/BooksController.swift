@@ -13,20 +13,20 @@ class BooksController {
     }
     
     func viewDidLoad() {
-        executor.run {
-            self.interactor.loadBooks()
+        executor.run { [weak self] in
+            self?.interactor.loadBooks()
         }
     }
     
     func pullToRefresh() {
-        executor.run {
-            self.interactor.loadBooks()
+        executor.run { [weak self] in
+            self?.interactor.loadBooks()
         }
     }
     
     func checkChange(isbn: String, isSelected: Bool) {
-        executor.run {
-            self.interactor.setSelected(for: isbn, to: isSelected)
+        executor.run { [weak self] in
+            self?.interactor.setSelected(for: isbn, to: isSelected)
         }
     }
 }
