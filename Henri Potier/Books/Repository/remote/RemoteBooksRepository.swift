@@ -23,15 +23,13 @@ class RemoteBooksRepositoryImpl : RemoteBooksRepository {
             guard let data = receivedData else { throw RepositoryError.serverError }
             
             let books = try parser.parse(data)
-                .compactMap({$0})
-            
-            return books.map({ (bookJSON) -> Book in
+            return books.map({
                 Book(
-                    isbn: bookJSON.isbn,
-                    title: bookJSON.title,
-                    price: bookJSON.price,
-                    cover: bookJSON.cover,
-                    synopsis: bookJSON.synopsis
+                    isbn: $0.isbn,
+                    title: $0.title,
+                    price: $0.price,
+                    cover: $0.cover,
+                    synopsis: $0.synopsis.joined()
                 )
             })
         } else {

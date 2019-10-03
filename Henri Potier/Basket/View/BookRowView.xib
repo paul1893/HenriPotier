@@ -22,29 +22,30 @@
             <rect key="frame" x="0.0" y="0.0" width="350" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0 €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQi-NU-ZZw">
-                    <rect key="frame" x="324.5" y="44" width="25.5" height="22"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter à l'école des sorciers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdN-WM-jbV">
-                    <rect key="frame" x="0.0" y="44" width="192" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="192" id="Mw9-t9-osj"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0ai-7S-hfd">
+                    <rect key="frame" x="0.0" y="44" width="350" height="22"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Harry Potter à l'école des sorciers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdN-WM-jbV">
+                            <rect key="frame" x="0.0" y="0.0" width="309" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQi-NU-ZZw">
+                            <rect key="frame" x="309" y="0.0" width="41" height="22"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="NdN-WM-jbV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="6LI-NU-dmr"/>
-                <constraint firstItem="NdN-WM-jbV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RJD-5r-qWc"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hQi-NU-ZZw" secondAttribute="bottom" id="TxI-5H-Gja"/>
-                <constraint firstItem="hQi-NU-ZZw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VJm-zf-QXH"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NdN-WM-jbV" secondAttribute="bottom" id="f51-ba-Ya5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="0ai-7S-hfd" secondAttribute="top" id="3z8-mS-8gP"/>
+                <constraint firstItem="0ai-7S-hfd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="O83-Sh-CRP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0ai-7S-hfd" secondAttribute="bottom" id="qOi-9t-jbu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0ai-7S-hfd" secondAttribute="trailing" id="rrb-Qr-8b5"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

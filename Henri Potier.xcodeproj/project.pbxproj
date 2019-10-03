@@ -19,7 +19,6 @@
 		2E5431122334F0AA0094C6EE /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431112334F0AA0094C6EE /* Caller.swift */; };
 		2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */; };
 		2E9699152336DA68005698DB /* DiscountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9699142336DA68005698DB /* DiscountViewModel.swift */; };
-		2ECEA45F233568920043CDF2 /* DiscountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA45E233568920043CDF2 /* DiscountTests.swift */; };
 		2ECEA461233570650043CDF2 /* BookRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECEA460233570650043CDF2 /* BookRowView.xib */; };
 		2ECEA463233571660043CDF2 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA462233571660043CDF2 /* BookRowView.swift */; };
 		2EE76C782333DE0A00073A4A /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE76C772333DE0A00073A4A /* BasketViewController.swift */; };
@@ -80,7 +79,6 @@
 		2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBooksRepositoryTests.swift; sourceTree = "<group>"; };
 		2E9699142336DA68005698DB /* DiscountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewModel.swift; sourceTree = "<group>"; };
 		2E97A96C2334E71A00C4889B /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ECEA45E233568920043CDF2 /* DiscountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountTests.swift; sourceTree = "<group>"; };
 		2ECEA460233570650043CDF2 /* BookRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRowView.xib; sourceTree = "<group>"; };
 		2ECEA462233571660043CDF2 /* BookRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowView.swift; sourceTree = "<group>"; };
 		2EE76C772333DE0A00073A4A /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 				2EEB135B233504F400445292 /* BasketInteractorTests.swift */,
 				2EEB13652335421000445292 /* BasketPresenterTests.swift */,
 				2EEB13672335443400445292 /* BasketRepositoryTests.swift */,
-				2ECEA45E233568920043CDF2 /* DiscountTests.swift */,
 			);
 			path = Basket;
 			sourceTree = "<group>";
@@ -352,7 +349,6 @@
 				2E306C4C2333DD1C00AF58CD /* Sources */,
 				2E306C4D2333DD1C00AF58CD /* Frameworks */,
 				2E306C4E2333DD1C00AF58CD /* Resources */,
-				4BBBB09445D858A522A63C0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -441,28 +437,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4BBBB09445D858A522A63C0A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Henri Potier/Pods-Henri Potier-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Henri Potier/Pods-Henri Potier-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		647B1D6944FE7AEA495A2552 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,7 +509,6 @@
 				2EE76CB22334D6A400073A4A /* BooksControllerTests.swift in Sources */,
 				2EEB1360233507E600445292 /* BooksPresenterTests.swift in Sources */,
 				2EEB135C233504F400445292 /* BasketInteractorTests.swift in Sources */,
-				2ECEA45F233568920043CDF2 /* DiscountTests.swift in Sources */,
 				2EEB13662335421000445292 /* BasketPresenterTests.swift in Sources */,
 				2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */,
 			);

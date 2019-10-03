@@ -22,19 +22,9 @@ class BasketRepositoryImpl : BasketRepository {
             guard error == nil else { throw RepositoryError.serverError }
             guard let data = receivedData else { throw RepositoryError.serverError }
             
-            let discount = try parser.parse(data)
+            guard let discount = try parser.parse(data).offers.first else { throw RepositoryError.serverError }
             
-            var slice: Slice? = nil
-            if let sliceValue = discount?.slice?.sliceValue,
-                let value = discount?.slice?.value {
-                slice = Slice(sliceValue: sliceValue, value: value)
-            }
-            
-            return Discount(
-                percentage: discount?.percentage,
-                minus: discount?.minus,
-                slice: slice
-            )
+            return Discount(value: discount.value)
         } else {
             throw RepositoryError.wrongUrl
         }

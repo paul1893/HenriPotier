@@ -19,14 +19,13 @@ class RemoteBooksRepositoryTests: XCTestCase {
             self.error = error
         }
         
-        override func parse(_ data: Data) throws -> [BookJSON?] {
+        override func parse(_ data: Data) throws -> [BookJSON] {
             if let error = error {
                 throw error
             }
             return [
-                BookJSON(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: "synopsis"),
-                nil,
-                BookJSON(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: "synopsis")
+                BookJSON(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: ["paragraph 1", "paragraph 2"]),
+                BookJSON(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: ["synopsis"])
             ]
         }
     }
@@ -43,7 +42,7 @@ class RemoteBooksRepositoryTests: XCTestCase {
             let result = try repository.getBooks()
             
             // THEN
-            XCTAssertEqual(result[0], Book(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: "synopsis"))
+            XCTAssertEqual(result[0], Book(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: "paragraph 1paragraph 2"))
             XCTAssertEqual(result[1], Book(isbn: "isbn", title: "Henri Potier", price: 35, cover: "cover", synopsis: "synopsis"))
             XCTAssertEqual(result.count, 2)
         } catch  {

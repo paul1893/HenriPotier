@@ -6,6 +6,5 @@ target 'Henri Potier' do
   use_frameworks!
 
   # Pods for Henri Potier
-  pod 'SwiftyJSON', '~> 4.0'
 
 end

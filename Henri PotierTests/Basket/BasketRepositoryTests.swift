@@ -14,13 +14,17 @@ class BasketRepositoryTests: XCTestCase {
     
     class MockParser : BasketParser {
         private let error: RepositoryError?
-        var json = BasketJSON(percentage: 5, minus: 15, slice: SliceJSON(sliceValue: 100, value: 12))
+        var json = BasketJSON(offers: [
+                DiscountJSON(type: "percentage", value: 5, sliceValue: nil),
+                DiscountJSON(type: "minus", value: 15, sliceValue: nil),
+                DiscountJSON(type: "slice", value: 12, sliceValue: 100),
+            ])
         
         init(error: RepositoryError? = nil) {
             self.error = error
         }
         
-        override func parse(_ data: Data) throws -> BasketJSON? {
+        override func parse(_ data: Data) throws -> BasketJSON {
             if let error = error {
                 throw error
             }
@@ -40,7 +44,7 @@ class BasketRepositoryTests: XCTestCase {
             let result = try repository.getDiscount(isbns: ["isbn1", "isbn2"])
             
             // THEN
-            XCTAssertEqual(result, Discount(percentage: 5, minus: 15, slice: Slice(sliceValue: 100, value: 12)))
+            XCTAssertEqual(result, Discount(value: 5))
         } catch  {
             XCTFail()
         }
@@ -50,7 +54,7 @@ class BasketRepositoryTests: XCTestCase {
         // GIVEN
         let caller = MockCaller()
         let parser = MockParser()
-        parser.json = BasketJSON(percentage: nil, minus: nil, slice: nil)
+        parser.json = BasketJSON(offers: [])
         
         // WHEN
         let repository = BasketRepositoryImpl(caller, parser)
@@ -59,9 +63,9 @@ class BasketRepositoryTests: XCTestCase {
             let result = try repository.getDiscount(isbns: ["isbn1", "isbn2"])
             
             // THEN
-            XCTAssertEqual(result, Discount(percentage: nil, minus: nil, slice: nil))
-        } catch  {
             XCTFail()
+        } catch  {
+            XCTAssertTrue(true)
         }
     }
     
@@ -70,6 +74,24 @@ class BasketRepositoryTests: XCTestCase {
         let mockCaller = MockCaller()
         mockCaller.error = RepositoryError.serverError
         let mockParser = MockParser()
+        
+        // WHEN
+        let repository = BasketRepositoryImpl(mockCaller, mockParser)
+        
+        do {
+            _ = try repository.getDiscount(isbns: [])
+            XCTFail()
+        } catch {
+            // THEN
+            XCTAssertTrue(true)
+        }
+    }
+    
+    func testGetDiscount_WhenServerError_BecauseOffersEmpty() {
+        // GIVEN
+        let mockCaller = MockCaller()
+        let mockParser = MockParser()
+        mockParser.json = BasketJSON(offers: [DiscountJSON]())
         
         // WHEN
         let repository = BasketRepositoryImpl(mockCaller, mockParser)

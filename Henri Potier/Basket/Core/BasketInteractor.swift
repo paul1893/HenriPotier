@@ -23,13 +23,9 @@ class BasketInteractorImpl : BasketInteractor {
             .filter { (book) -> Bool in
             return book.isSelected
         }
-        let price = books.map { (book) -> Int in book.price}.reduce(0, +)
         presenter.present(books: books)
-        
         do {
-            let discount = try repository.getDiscount(isbns: books.map({ (book) -> String in
-                book.isbn
-            })).getBestDiscount(forPrice: price)
+            let discount = try repository.getDiscount(isbns: books.map({ $0.isbn })).value
             presenter.presentDiscount(price: discount)
         } catch {
             /* do nothing */

@@ -14,7 +14,7 @@ class BasketInteractorTests: XCTestCase {
             if let error = error {
                 throw error
             }
-            return Discount(percentage: 0, minus: 0, slice: Slice(sliceValue: 0, value: 0))
+            return Discount(value: 0)
         }
     }
     class MockPresenter : BasketPresenter {
