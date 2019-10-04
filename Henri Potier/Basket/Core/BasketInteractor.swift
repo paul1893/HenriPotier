@@ -19,13 +19,11 @@ class BasketInteractorImpl : BasketInteractor {
     
     func loadBasket() {
         let books = localBooksRepository.getBooks()
-            .sorted {$0.cover < $1.cover}
-            .filter { (book) -> Bool in
-            return book.isSelected
-        }
+            .sorted(by: \.cover)
+            .filter(by: \.isSelected)
         presenter.present(books: books)
         do {
-            let discount = try repository.getDiscount(isbns: books.map({ $0.isbn })).value
+            let discount = try repository.getDiscount(isbns: books.map(\.isbn)).value
             presenter.presentDiscount(price: discount)
         } catch {
             /* do nothing */

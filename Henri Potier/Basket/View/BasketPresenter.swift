@@ -27,7 +27,7 @@ class BasketPresenterImpl: BasketPresenter {
                     )
                 }),
                 numberOfBooks: "x \(books.count)",
-                totalPrice: "\(books.map({ (book) -> Int in book.price }).reduce(0, +)) €"
+                totalPrice: "\(books.map(\.price).reduce(0, +)) €"
             ))
         }
     }

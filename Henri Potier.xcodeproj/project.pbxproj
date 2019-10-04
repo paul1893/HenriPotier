@@ -18,6 +18,7 @@
 		2E5431102334F09E0094C6EE /* BookParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54310D2334F09E0094C6EE /* BookParser.swift */; };
 		2E5431122334F0AA0094C6EE /* Caller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431112334F0AA0094C6EE /* Caller.swift */; };
 		2E5431142334F0D50094C6EE /* RemoteBooksRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */; };
+		2E884B492347581A0074CAE7 /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E884B482347581A0074CAE7 /* SequenceExtension.swift */; };
 		2E9699152336DA68005698DB /* DiscountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9699142336DA68005698DB /* DiscountViewModel.swift */; };
 		2ECEA461233570650043CDF2 /* BookRowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ECEA460233570650043CDF2 /* BookRowView.xib */; };
 		2ECEA463233571660043CDF2 /* BookRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECEA462233571660043CDF2 /* BookRowView.swift */; };
@@ -77,6 +78,7 @@
 		2E54310D2334F09E0094C6EE /* BookParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookParser.swift; sourceTree = "<group>"; };
 		2E5431112334F0AA0094C6EE /* Caller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Caller.swift; sourceTree = "<group>"; };
 		2E5431132334F0D50094C6EE /* RemoteBooksRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteBooksRepositoryTests.swift; sourceTree = "<group>"; };
+		2E884B482347581A0074CAE7 /* SequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
 		2E9699142336DA68005698DB /* DiscountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewModel.swift; sourceTree = "<group>"; };
 		2E97A96C2334E71A00C4889B /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECEA460233570650043CDF2 /* BookRowView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRowView.xib; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				2EE76C9E2333E75000073A4A /* Util.swift */,
 				2EE76CA42334C66A00073A4A /* AppRouter.swift */,
 				2EE76CA62334C69A00073A4A /* DeviceManager.swift */,
+				2E884B482347581A0074CAE7 /* SequenceExtension.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				2EE76CA72334C69A00073A4A /* DeviceManager.swift in Sources */,
 				2EE76CA92334CEC900073A4A /* UIImageCollectionViewCell.swift in Sources */,
 				2EEB1355233502C600445292 /* BasketRepository.swift in Sources */,
+				2E884B492347581A0074CAE7 /* SequenceExtension.swift in Sources */,
 				2EE76C7C2333E1C900073A4A /* BooksController.swift in Sources */,
 				2E54310E2334F09E0094C6EE /* RemoteBooksRepository.swift in Sources */,
 				2E306C5C2333DD1C00AF58CD /* Henri_Potier.xcdatamodeld in Sources */,

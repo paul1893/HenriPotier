@@ -27,7 +27,7 @@ class BooksInteractorImpl : BooksInteractor {
         if (!deviceManager.isOnline()) {
             let books = self.localRepository.getBooks()
             presenter.present(with: books)
-            presenter.presentBooksBadge(with: books.filter({$0.isSelected}).count)
+            presenter.presentBooksBadge(with: books.filter(by: \.isSelected).count)
             return
         }
         
@@ -36,20 +36,18 @@ class BooksInteractorImpl : BooksInteractor {
             presenter.present(with: books)
             localRepository.deleteBooks()
             localRepository.save(books: books)
-            presenter.presentBooksBadge(with: localRepository.getBooks().filter({$0.isSelected}).count)
+            presenter.presentBooksBadge(with: localRepository.getBooks().filter(by: \.isSelected).count)
         } catch {
             presenter.presentError()
         }
     }
     
     func setSelected(for isbn: String, to isSelected: Bool) {
-        if var book = localRepository.getBooks().first(where: { (book) -> Bool in
-            book.isbn == isbn
-        }) {
+        if var book = localRepository.getBooks().first(where: { $0.isbn == isbn }) {
             book.isSelected = isSelected
             localRepository.deleteBook(isbn: isbn)
             localRepository.save(book: book)
         }
-        presenter.presentBooksBadge(with: localRepository.getBooks().filter({$0.isSelected}).count)
+        presenter.presentBooksBadge(with: localRepository.getBooks().filter(by: \.isSelected).count)
     }
 }

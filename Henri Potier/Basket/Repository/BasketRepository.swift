@@ -23,7 +23,6 @@ class BasketRepositoryImpl : BasketRepository {
             guard let data = receivedData else { throw RepositoryError.serverError }
             
             guard let discount = try parser.parse(data).offers.first else { throw RepositoryError.serverError }
-            
             return Discount(value: discount.value)
         } else {
             throw RepositoryError.wrongUrl
